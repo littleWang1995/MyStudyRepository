@@ -11,10 +11,10 @@ import org.springframework.context.annotation.ComponentScan;
  * SpringBootApplication:声明这是一个Springboot项目
  * @author jiewang
  */
-@SpringBootConfiguration
-@EnableAutoConfiguration
-@ComponentScan
-//@SpringBootApplication
+//@SpringBootConfiguration
+//@EnableAutoConfiguration
+//@ComponentScan
+@SpringBootApplication
 public class MainApp {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(MainApp.class, args);

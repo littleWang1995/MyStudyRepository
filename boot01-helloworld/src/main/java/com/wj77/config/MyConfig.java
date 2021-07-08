@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.web.filter.HiddenHttpMethodFilter;
 
 /**
  * @author jiewang
@@ -30,5 +31,12 @@ public class MyConfig {
     public Pet pet02(){
         Pet tom = new Pet("tom2");
         return tom;
+    }
+
+    @Bean
+    public HiddenHttpMethodFilter getHiddenHttpMethodFilter(){
+        HiddenHttpMethodFilter hiddenHttpMethodFilter = new HiddenHttpMethodFilter();
+        hiddenHttpMethodFilter.setMethodParam("_m");
+        return hiddenHttpMethodFilter;
     }
 }
