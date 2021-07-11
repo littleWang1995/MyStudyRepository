@@ -6,10 +6,16 @@ package com.wj77.bean;
 public class User {
     private String username;
     private Integer age;
+    private Pet pet;
 
-    public User(String username, Integer age) {
+    public User(String username, Integer age, Pet pet) {
         this.username = username;
         this.age = age;
+        this.pet = pet;
+    }
+
+    public User() {
+
     }
 
     public String getUsername() {
