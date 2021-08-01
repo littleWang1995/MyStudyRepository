@@ -4,7 +4,14 @@ spring:
     password: 123456
     username: root
     driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
 
   jdbc:
     template:
       query-timeout: 3
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mybatis/mapper/*.xml
