@@ -9,7 +9,9 @@ spring:
   jdbc:
     template:
       query-timeout: 3
-
+  redis:
+    client-type: jedis
+    port: 6379
 
 mybatis:
   configuration:
@@ -20,3 +22,17 @@ mybatis:
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false
+
+
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      enabled: true
+
+info:
+  appName: boot-admin
